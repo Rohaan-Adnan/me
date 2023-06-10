@@ -19,18 +19,24 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
 
+# Prints a list of words
 for word in some_words:
     print(word)
 
+
+# Prints a list of words
 for x in some_words:
     print(x)
 
+# Prints a list of words in one line
 print(some_words)
 
+# Checks to see if the words are more than 3 
+# and prints the message "some_words contains more than 3 words"
 if len(some_words) > 3:
     print("some_words contains more than 3 words")
 
-
+# Prints out the platfrom module
 def usefulFunction():
     """
     You may want to look up what uname does before you guess
