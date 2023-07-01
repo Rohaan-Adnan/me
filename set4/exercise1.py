@@ -29,18 +29,25 @@ def get_some_details():
     Return a new dictionary that just has the last name, password, and the
     number you get when you add the postcode to the id-value.
     TIP: Make sure that you add the numbers, not concatinate the strings.
-         E.g. 2000 + 3000 = 5000 not 20003000
+    E.g. 2000 + 3000 = 5000 not 20003000
     TIP: Keep a close eye on the format you get back. JSON is nested, so you
-         might need to go deep. E.g to get the name title you would need to:
-         data["results"][0]["name"]["title"]
-         Look out for the type of brackets. [] means list and {} means
-         dictionary, you'll need integer indeces for lists, and named keys for
-         dictionaries.
+    might need to go deep. E.g to get the name title you would need to:
+    data["results"][0]["name"]["title"]
+    Look out for the type of brackets. [] means list and {} means
+    dictionary, you'll need integer indeces for lists, and named keys for
+    dictionaries.
     """
-    json_data = open(LOCAL + "/lazyduck.json").read()
+    with open(LOCAL + "/lazyduck.json") as file:
+        json_data = file.read()
 
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    result = data["results"][0] 
+
+    last_name = result["name"]["last"]
+    password = result["login"]["password"]
+    postcode_plus_id = int(result["location"]["postcode"]) + int(result["id"]["value"])
+
+    return {"lastName": last_name, "password": password, "postcodePlusID": postcode_plus_id}
 
 
 def wordy_pyramid():
@@ -79,7 +86,35 @@ def wordy_pyramid():
     """
     pyramid = []
 
+    wordcount = 3
+    while wordcount <= 19:
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={wordcount}"
+        response = requests.get(url)
+
+        if response.status_code == 200 and response.text is not None:
+            word = response.text.strip()
+            pyramid.append(word)
+        else:
+            print("Error")
+        wordcount += 2
+
+    url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20"
+    response = requests.get(url)
+    word = response.text.strip()
+    pyramid.append(word)
+
+    wordcount = 18
+    while wordcount >= 2:
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={wordcount}"
+        response = requests.get(url)
+
+        if response.status_code == 200 and response.text is not None:
+            word = response.text.strip()
+            pyramid.append(word)
+        wordcount -= 2
+
     return pyramid
+
 
 
 def pokedex(low=1, high=5):
@@ -96,13 +131,30 @@ def pokedex(low=1, high=5):
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    id = 5
-    url = f"https://pokeapi.co/api/v2/pokemon/{id}"
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
+    tallest = 0
+    tallest_pokemon = None
+    name = None
+    weight = None
+    height = None
 
-    return {"name": None, "weight": None, "height": None}
+    for id in range(low, high + 1):
+        url = f"https://pokeapi.co/api/v2/pokemon/{id}"
+        response = requests.get(url)
+
+        if response.status_code == 200:
+            pokemon_data = json.loads(response.text)
+            current_height = pokemon_data["height"]
+
+            if current_height > tallest:
+                tallest = current_height
+                tallest_pokemon = pokemon_data
+
+    if tallest_pokemon:
+        name = tallest_pokemon["name"]
+        height = tallest_pokemon["height"]
+        weight = tallest_pokemon["weight"]
+
+    return {"name": name, "weight": weight, "height": height}
 
 
 def diarist():
@@ -122,7 +174,21 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    pass
+    gcode_file = "C:/Users/ROHAAN ADNAN/1161/me/set4/Trispokedovetiles(laser).gcode"
+    file_path =  "C:/Users/ROHAAN ADNAN/1161/me/set4/laser.pew"
+    laser_on_off_count = 0
+
+    with open(gcode_file, "r") as file:
+        for line in file:
+            if "M10 P1" in line:
+                laser_on_off_count += 1
+
+    count_str = str(laser_on_off_count)
+    file_path = "set4/lasers.pew"
+
+    with open(file_path, "w", encoding="utf-8") as lasers_pew:
+        lasers_pew.write(count_str)
+
 
 
 if __name__ == "__main__":
