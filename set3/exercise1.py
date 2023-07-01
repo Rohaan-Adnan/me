@@ -22,7 +22,7 @@ def loop_ranger(start, stop=None, step=1):
 #with a step size of 2
 def two_step_ranger(start, stop):
     
-    return range(start, stop, 2)
+     return loop_ranger(start, stop, step=2)
 
 #This code repeatedly prompts for a valid number within a given range.
 def stubborn_asker(low, high):
