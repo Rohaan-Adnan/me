@@ -8,41 +8,45 @@ import random
 # The code defines a guessing game where the user is prompted to enter a lower and upper bound, 
 # and then attempts to guess a randomly generated number within that range, 
 # with feedback provided after each guess.
+def limit_integer_value(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Please use integer.")
+
 def advancedGuessingGame():
-    print("Welcome to the guessing game!")
-    lowerBound = not_number_rejector("Enter a lower bound: ")
-    upperBound = not_number_rejector("Enter an upper bound: ")
+    print("\nWelcome to the guessing game!")
+    print("A number between _ and _ ?")
+
+    while True:
+        try:
+            lowerBound = limit_integer_value("Enter a lower bound: ")
+            upperBound = limit_integer_value("Enter an upper bound: ")
+            break
+        except ValueError:
+            print("Please use integer datatype entry.")
+
     print(f"OK then, a number between {lowerBound} and {upperBound}?")
 
     actualNumber = random.randint(lowerBound, upperBound)
-
     guessed = False
 
     while not guessed:
-        guessedNumber = not_number_rejector("Guess a number: ")
+        guessedNumber = limit_integer_value("Guess a number: ")
         print(f"You guessed {guessedNumber},")
-        if guessedNumber == actualNumber:
-            print(f"You got it!! It was {actualNumber}")
-            guessed = True
+
+        if guessedNumber < lowerBound or guessedNumber > upperBound:
+            print("Your Guessed number is outside the Bound")
         elif guessedNumber < actualNumber:
             print("Too small, try again :'(")
-        else:
+        elif guessedNumber > actualNumber:
             print("Too big, try again :'(")
+        else:
+            print(f"You got it!! It was {actualNumber}")
+            guessed = True
+
     return "You got it!"
-
-
-def not_number_rejector(message):
-    while True:
-        response = input(message)
-        try:
-            number = int(response)
-            return number
-        except ValueError:
-            print("Invalid input. Please enter a valid number.")
-
-
-advancedGuessingGame()
-
 
 if __name__ == "__main__":
     print(advancedGuessingGame())

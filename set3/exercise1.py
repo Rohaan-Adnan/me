@@ -22,7 +22,7 @@ def loop_ranger(start, stop=None, step=1):
 #with a step size of 2
 def two_step_ranger(start, stop):
     
-     return loop_ranger(start, stop, step=2)
+    return loop_ranger(start, stop, step=2)
 
 #This code repeatedly prompts for a valid number within a given range.
 def stubborn_asker(low, high):
@@ -36,7 +36,7 @@ def stubborn_asker(low, high):
                 print("Number out of range. Try again.")
         except ValueError:
             print("Invalid input. Please enter a valid number.")
- 
+
 
 #repeatedly prompts the user to enter a number, only accepts numbers as a input 
 # and returns the valid number.
