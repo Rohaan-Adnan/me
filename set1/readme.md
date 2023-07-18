@@ -1,2 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
-Very simple task
+Very simple and easy task 
