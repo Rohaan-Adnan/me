@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+I thoroughly conducted research on various datasets and ultimately decided to work with the Global Internet Usage dataset from Kaggle (https://www.kaggle.com/datasets/sansuthi/gapminder-internet) due to it meeting the project's requirements. Currently, I am focusing on learning how to use geopandas effectively to visualize the data in a meaningful and informative manner.

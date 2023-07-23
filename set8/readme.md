@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Right now, I'm diving into the dataset using the example file we got in the lectures. My main objective is to find fascinating patterns and insights hidden in the data. This testing phase will help me grasp the dataset better and get ready for a more detailed analysis down the road.

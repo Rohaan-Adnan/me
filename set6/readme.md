@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Today, I spent time looking into datasets for my final project and checked if they had at least 200 columns and included geographical information. After going through various options, I made a list of potential datasets that meet these criteria and also noted down how I could use them in my project.
