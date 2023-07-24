@@ -182,9 +182,6 @@ def best_letter_for_pets() -> str:
 
 
 
-dimport requests
-from typing import Dict
-
 def make_filler_text_dictionary() -> Dict:
     """Make a dictionary of random words filler text.
     There is a random word generator here:
@@ -223,7 +220,6 @@ def make_filler_text_dictionary() -> Dict:
     return wd
 
 
-
 def random_filler_text(number_of_words=200) -> str:
     """Make a paragraph of random filler text.
     Using the dictionary returned by make_filler_text_dictionary, make a
@@ -236,8 +232,12 @@ def random_filler_text(number_of_words=200) -> str:
     """
 
     my_dict = make_filler_text_dictionary()
-
     words = []
+
+    for _ in range(number_of_words):
+        word_length = random.randint(3, 7)  # Random word length between 3 and 7
+        random_word = random.choice(my_dict[word_length])  # Randomly pick a word of the chosen length
+        words.append(random_word)
 
     return " ".join(words)
 
