@@ -249,7 +249,7 @@ def fast_filler(number_of_words=200) -> str:
     from make_filler_text_dictionary to a file.
     On the second run, if the file already exists use it instead of going to
     the internet.
-    Use the filename "dict_cache.json"
+    Use the filename "dict_racey.json"
     TIP: you'll need the os and json libraries
     TIP: you'll probably want to use json dumps and loads to get the
     dictionary into and out of the file. Be careful when you read it back in,
@@ -257,33 +257,29 @@ def fast_filler(number_of_words=200) -> str:
     If you get this one to work, you are a Very Good Programmer™!
     """
 
-    fname = "dict_cache.json"
-
-    if os.path.exists(fname):
-        # If the cache file exists, load the dictionary from the file.
-        with open(fname, "r") as file:
-            filler_dict = json.load(file)
+    fname = "dict_racey.json"
+    if os.path.isfile(fname):
+        with open(fname, "r") as inFile:
+            my_dict = json.load(inFile)
     else:
-        # If the cache file doesn't exist, use the pre-generated filler_dict.
-        # Replace this with the actual code to generate the dictionary if needed.
-        filler_dict = {
-            "1": "Lorem",
-            "2": "ipsum",
-            "3": "dolor",
-            # Add more filler words or sentences here.
-        }
+        # Assuming you have a function called make_filler_text_dictionary to generate the dictionary.
+        my_dict = make_filler_text_dictionary()
+        with open(fname, "w") as outFile:
+            json.dump(my_dict, outFile)
 
-        # Save the pre-generated dictionary to the cache file.
-        with open(fname, "w") as file:
-            json.dump(filler_dict, file)
+    words = []
 
-    # Use the dictionary to get the filler text (assuming the dictionary structure).
-    # Replace the following lines with the actual logic to generate the filler text.
-    filler_text_list = list(filler_dict.values())
-    num_repeats = (number_of_words // len(filler_text_list)) + 1
-    filler_text = " ".join(filler_text_list * num_repeats)[:number_of_words]
+    for _ in range(number_of_words):
+        word_length = random.randint(3, 6)
+        word_index = random.randint(0, 2)
+        try:
+            words.append(my_dict[str(word_length)][word_index])
+        except KeyError:
+            words.append(my_dict[str(word_length + 1)][word_index])
 
-    return filler_text
+    paragraph = " ".join(words)
+    paragraph = paragraph[0].upper() + paragraph[1:] + "."
+    return paragraph
 
 if __name__ == "__main__":
     print("give_me_five", give_me_five(), type(give_me_five()))
