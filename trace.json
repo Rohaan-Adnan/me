@@ -238,7 +238,7 @@
   "7",
   {
     "of_total": 34,
-    "mark": 33,
+    "mark": 32,
     "results": [
       {
         "value": 1,
@@ -361,16 +361,16 @@
         "name": "\nrandom_filler_text:\n    given:    1000\n    expected: True\n    got:      True"
       },
       {
+        "value": 1,
+        "name": "\nfast_filler:\n    given:    100\n    expected: True\n    got:      True"
+      },
+      {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    100\n    expected: True\n    got:      False"
+        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      False"
       },
       {
-        "value": 1,
-        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      True"
-      },
-      {
-        "value": 1,
-        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      True"
+        "value": 0,
+        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      False"
       },
       {
         "value": 1,
