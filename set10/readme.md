@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Experimenting with Plotly using GeoJSON data to create a map showing the geographical distribution of income per person, internet usage rate, and urban rate.
