@@ -7,7 +7,7 @@ Angola,1502.95,32.55,66.825,Africa
 Antigua and Barbuda,15284.77,95.69,24.433,North America
 Argentina,8496.43,85.51,92.111,South America
 Armenia,4505.87,76.51,63.313,Asia
-Aruba,24487.86,,43.697,North America
+Aruba,24487.86,,43.697,South America
 Australia,51722.07,96.39,86.241,Oceania
 Austria,48809.23,87.53,58.748,Europe
 Azerbaijan,4229.91,84.6,56.397,Asia
@@ -39,7 +39,7 @@ Chad,643.77,11.66,23.52,Africa
 Chile,13165.39,86.37,87.727,South America
 China,10408.72,70.05,61.428,Asia
 Colombia,5304.29,70.85,81.425,South America
-Comoros,1519.59,21.16,29.38,Asia
+Comoros,1519.59,21.16,29.38,Africa
 "Congo, Dem. Rep.",524.67,22.86,45.638,Africa
 "Congo, Rep.",1838.45,,67.829,Africa
 Cook Islands,,,,Oceania
@@ -54,58 +54,58 @@ Djibouti,2918,61.26,78.062,Africa
 Dominica,7003.47,77.07,71.09,North America
 Dominican Rep.,7167.91,82.2,82.54,North America
 Ecuador,5645.2,70.7,64.166,South America
-Egypt,3571.56,,42.783,South America
-El Salvador,3961.73,54.6,73.444,Africa
-Equatorial Guinea,6327.6,53.84,73.1,North America
+Egypt,3571.56,,42.783,Asia
+El Salvador,3961.73,54.6,73.444,North America
+Equatorial Guinea,6327.6,53.84,73.1,Africa
 Eritrea,,14.18,41.347,Africa
-Estonia,23595.24,89.06,69.229,Africa
-Ethiopia,918.65,16.42,21.695,Europe
-Faeroe Islands,61979.8,,42.398,Africa
+Estonia,23595.24,89.06,69.229,Europe
+Ethiopia,918.65,16.42,21.695,Africa
+Faeroe Islands,61979.8,,42.398,Europe
 Fiji,4864.11,84.88,57.247,Oceania
 Finland,49169.72,92.17,85.517,Europe
 France,39055.28,84.71,80.975,Europe
-French Polynesia,18984.62,,61.975,Europe
-Gabon,6680.08,70.79,90.092,Oceania
+French Polynesia,18984.62,,61.975,Oceania
+Gabon,6680.08,70.79,90.092,Africa
 Gambia,704.03,,62.582,Africa
-Georgia,4255.74,72.53,59.453,Africa
-Germany,46772.83,89.81,77.453,Asia / Europe
-Ghana,2176.58,56.68,57.349,Europe
-Gibraltar,,,100,Africa
+Georgia,4255.74,72.53,59.453,Asia / Europe
+Germany,46772.83,89.81,77.453,Europe
+Ghana,2176.58,56.68,57.349,Africa
+Gibraltar,,,100,Europe
 Greece,17658.95,78.12,79.715,Europe
-Greenland,54693.51,,87.282,Europe
+Greenland,54693.51,,87.282,North America
 Grenada,8437.54,74.72,36.537,North America
 Guadeloupe,,,,North America
-Guam,34780.86,,94.938,North America
-Guatemala,4609.9,47.51,51.836,Oceania
+Guam,34780.86,,94.938,Oceania
+Guatemala,4609.9,47.51,51.836,North America
 Guinea,1073.66,28.82,36.875,North America
 Guinea-Bissau,710.26,27.91,44.196,Africa
 Guyana,6863.07,81.8,26.786,Africa
-Haiti,1283.14,36.39,57.088,South America
+Haiti,1283.14,36.39,57.088,North America
 Honduras,2354.12,43.49,58.359,North America
-"Hong Kong, China",46109.23,,100,North America
-Hungary,16125.61,84.77,71.942,Asia
+"Hong Kong, China",46109.23,,100,Asia
+Hungary,16125.61,84.77,71.942,Europe
 Iceland,58813.8,99.53,93.898,Europe
-India,1913.22,43.41,34.926,Europe
+India,1913.22,43.41,34.926,Asia
 Indonesia,3895.62,53.73,56.641,Asia
 Iran,2746.42,,75.874,Asia
 Iraq,4251.34,45.79,70.893,Asia
-Ireland,85420.19,91.99,63.653,Asia
-Israel,44846.79,90.13,92.587,Europe
-Italy,31918.69,70.48,71.039,Asia
-Jamaica,4897.26,79.43,56.311,Europe
-Japan,39986.93,90.22,91.782,North America
+Ireland,85420.19,91.99,63.653,Europe
+Israel,44846.79,90.13,92.587,Asia
+Italy,31918.69,70.48,71.039,Europe
+Jamaica,4897.26,79.43,56.311,Africa
+Japan,39986.93,90.22,91.782,Asia
 Jordan,3987.65,75.45,91.418,Asia
 Kazakhstan,9121.64,85.94,57.671,Asia
-Kenya,1936.25,25.53,27.995,Asia
-Kiribati,1403.99,,55.594,Africa
-"Korea, Dem. Rep.",,,62.381,Oceania
+Kenya,1936.25,25.53,27.995,Africa
+Kiribati,1403.99,,55.594,Oceania
+"Korea, Dem. Rep.",,,62.381,Asia
 "Korea, Rep.",31721.3,96.51,81.414,Asia
 Kuwait,24297.7,99.11,100,Asia
 Kyrgyzstan,1182.52,,36.856,Asia
 Laos,2593.36,,36.29,Asia
-Latvia,18207.14,88.9,68.315,Asia
-Lebanon,5599.96,83.1,88.925,Europe
-Lesotho,3372.9,42.86,29.028,Asia
+Latvia,18207.14,88.9,68.315,Europe
+Lebanon,5599.96,83.1,88.925,Asia
+Lesotho,3372.9,42.86,29.028,Africa
 Liberia,597.53,27.95,52.089,Africa
 Libya,7034.66,,80.691,Africa
 Liechtenstein,165284.5,94.35,14.416,Europe
@@ -145,18 +145,18 @@ Nigeria,2074.61,51.46,51.958,Africa
 Niue,,,,Oceania
 Norway,68340.02,97,82.974,Europe
 Oman,16707.62,95.23,86.276,Asia
-Pakistan,1322.31,18.93,37.165,Oceania
-Palau,14016.25,,80.988,North America
-Panama,13293.33,65.54,68.414,Oceania
-Papua New Guinea,2446.08,27.73,13.345,South America
+Pakistan,1322.31,18.93,37.165,Asia
+Palau,14016.25,,80.988,Oceania
+Panama,13293.33,65.54,68.414,North America
+Papua New Guinea,2446.08,27.73,13.345,Oceania
 Paraguay,5353.35,73.96,62.183,South America
-Peru,6063.63,65.25,78.297,Asia
-Philippines,3224.42,47.11,47.408,Europe
+Peru,6063.63,65.25,78.297,South America
+Philippines,3224.42,47.11,47.408,Asia
 Poland,15816.82,83.18,60.043,Europe
-Portugal,22242.41,78.26,66.31,North America
-Puerto Rico,31427.43,,93.581,Asia
-Qatar,52315.66,99.65,99.235,Africa
-Reunion,,,,Europe
+Portugal,22242.41,78.26,66.31,Europe
+Puerto Rico,31427.43,,93.581,North America
+Qatar,52315.66,99.65,99.235,Asia
+Reunion,,,,Africa
 Romania,13047.46,78.46,54.194,Europe
 Russia,10194.44,84.99,74.754,Asia / Europe
 Rwanda,773.82,23.8,17.432,Africa
@@ -195,7 +195,7 @@ Togo,875.25,29.08,42.8,Africa
 Tonga,4605.97,,23.099,Oceania
 Trinidad and Tobago,13871.8,78.67,53.214,North America
 Tunisia,3497.73,72.81,69.568,Africa
-Turkey,8561.06,77.67,76.105,Europe / Asia
+Turkey,8561.06,77.67,76.105,Asia / Europe
 Turkmenistan,7297.18,,52.516,Asia
 Tuvalu,4674.91,,64.014,Oceania
 Uganda,846.88,6.1,24.954,Africa
